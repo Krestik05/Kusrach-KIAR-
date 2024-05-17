@@ -1,0 +1,11 @@
+#contact-us {
+    @include header-img("C:\Users\Глеб\Desktop\Пекарня\assets\images\pekr-min.jpg", 0.2, 70vh);
+    h1 {
+      color: white;
+    }
+  }
+  @media (max-width: 992px) {
+    #contact-us h1 {
+      font-size: 3rem;
+    }
+  }

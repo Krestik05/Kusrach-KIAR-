@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/images/logotip.jpg" style="border-radius: 25%;"/>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/91abd10b8f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script >$(document).ready(function () {
+      const breadList = $(".product-container.bread > div > div");
+      breadList.each((index, item) => {
+        $(item).click(function () {
+          $("#breadModal".concat((index + 1).toString())).modal("show");
+        });
+      });
+    
+      const cakeList = $(".product-container.cake > div > div");
+      cakeList.each((index, item) => {
+        $(item).click(function () {
+          $("#cakeModal".concat((index + 1).toString())).modal("show");
+        });
+      });
+    
+      const pastryList = $(".product-container.pastry > div > div");
+      pastryList.each((index, item) => {
+        $(item).click(function () {
+          $("#pastryModal".concat((index + 1).toString())).modal("show");
+        });
+      });
+    
+      const dessertList = $(".product-container.dessert > div > div");
+      dessertList.each((index, item) => {
+        $(item).click(function () {
+          $("#dessertModal".concat((index + 1).toString())).modal("show");
+        });
+      });
+    });</script>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>JoyBakery | Cake</title>
+  </head>
+  <body style=" background-color: #C3C18B;">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-custom navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand mx-5" href="C:\Users\Глеб\Desktop\Пекарня\index.html"
+        ><img src="C:\Users\Глеб\Desktop\Пекарня\assets\images\logo-white.png" 
+        href="C:\Users\Глеб\Desktop\Пекарня\index.html"/></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto px-5">
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\Глеб\Desktop\Пекарня\index.html">Главная</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+              Меню
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="C:\Users\Глеб\Desktop\Пекарня\bread.html">Хлеб</a>
+                <a class="dropdown-item" href="C:\Users\Глеб\Desktop\Пекарня\cake.html">Торты</a>
+                <a class="dropdown-item" href="C:\Users\Глеб\Desktop\Пекарня\pastries.html">Пироги</a>
+                <a class="dropdown-item" href="C:\Users\Глеб\Desktop\Пекарня\dessert.html">Пирожные</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\Глеб\Desktop\Пекарня\about-us.html">О нас</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\Глеб\Desktop\Пекарня\contact-us.html">Наши контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- HEADER -->
+    <header id="pastries-header"
+    style="background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), color-stop(100%, rgba(0, 0, 0, 0.5)), to(#000000)), url('assets/images/21fde0a3a40a6a7d188fd7f8c4316740.jpg');
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%, #000000 100%), url('assets/images/21fde0a3a40a6a7d188fd7f8c4316740.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    height: 70vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;">
+<div class="m-auto">
+        <h1 class="display-1">Пироги</h1>
+      </div>
+    </header>
+
+    <div id= "trigger " class="container-fluid text-center product-container pastry">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <img
+            src="C:\Users\Глеб\Desktop\Пекарня\assets\images\aebjl70raw1ys68ajyw69ziwu9c51ve6.jpg"
+            alt="pastry"
+            class="img-fluid"
+            style="    border-radius: 15%;"
+          />
+          <p>
+            Пирог с лимоном и творогом (125г.)<br />
+            3.35 руб.
+          </p>
+        </div>
+       
+    <!-- MODALS -->
+    <div
+      class="modal fade bd-example-modal-lg m-auto"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="pastryModal1"
+      aria-hidden="true"
+      id="pastryModal1"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              Пирог с лимоном и творогом
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+         <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-6 col-md-12">
+                <img  src="C:\Users\Глеб\Desktop\Пекарня\assets\images\aebjl70raw1ys68ajyw69ziwu9c51ve6.jpg" alt="pastry" />
+              </div>
+              <div class="clg-6 col-md-12">
+                <p class="text-justify">
+                  Вкусное сочетание нежного рассыпчатого деревенского творога и лимона.
+                </br>
+                  Цена: </br> 
+
+                  1 кг = 8 порций по 125 г-26.80руб.
+                  1,5 кг = 12 порций по 125 г-33,58руб.
+                </h2>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="button-container">
+      <a href="pastries.html" class="button">Вернуться обратно</a>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+      <div id="contacts" class="container-fluid">
+        <div class="row text-center">
+          <div class="col-lg-4 col-md-12">
+            <div id="xmlContainer"></div>
+  <script>
+    // XML-строка для разбора
+    var xmlString = `
+      <contact>
+        <h4> Наши контакты:</h4>
+        <p>
+          budbul@gmail.com; <br />
+          +375 33 323 77 98
+        </p>
+      </contact>
+    `;
+
+    // Создание объекта DOMParser
+    var parser = new DOMParser();
+
+    // Разбор XML-строки
+    var xmlDoc = parser.parseFromString(xmlString, 'text/xml');
+
+    // Получение корневого элемента
+    var contactElement = xmlDoc.documentElement;
+
+    // Вставка XML-кода в элемент контейнера
+    var xmlContainer = document.getElementById('xmlContainer');
+    xmlContainer.appendChild(contactElement);
+  </script>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <h4>Наш адрес</h4>
+            <p>
+              Брест, ул. Советская, 24
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <h4>Мы в соцсетях</h4>
+            <a href="facebook.com"> <i class="fab fa-facebook-square"></i></a>
+            <a href="twitter.com"><i class="fab fa-twitter-square"></i></a>
+            <a href="instagram.com"><i class="fab fa-instagram-square"></i></a>
+          </div>
+        </div>
+      </div>
+      <div id="copyright">
+        ООО «Пекарня ББ», УНП 291 594 301;
+        В торговом реестре 29.07.2021 г., № регистрации 173 934.
+        <img style="width: 30vh;
+        height: 5vh ;"
+            src="C:\Users\Глеб\Desktop\Пекарня\assets\images\payments.png"
+            />
+      </div>
+    </footer>
+
+    <!-- jQuery and JS scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

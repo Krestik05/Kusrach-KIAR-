@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/images/logotip.jpg" style="border-radius: 25%;"/>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/91abd10b8f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="prod.js"
+      ></script>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="C:\Users\Глеб\Desktop\Пекарня\assets\css\style.css" />
+    <link rel="stylesheet" href="form.css" />
+    <title>JoyBakery | Contact Us</title>
+  </head>
+  <body style=" background-color: #C3C18B;">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-custom navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand mx-5" href="C:\Users\Глеб\Desktop\Пекарня\index.html"
+        ><img src="C:\Users\Глеб\Desktop\Пекарня\assets\images\logo-white.png" 
+        href="C:\Users\Глеб\Desktop\Пекарня\index.html"/></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto px-5">
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\Глеб\Desktop\Пекарня\index.html">Главная</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+              Меню
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="C:\Users\Глеб\Desktop\Пекарня\bread.html">Хлеб</a>
+                <a class="dropdown-item" href="C:\Users\Глеб\Desktop\Пекарня\cake.html">Торты</a>
+                <a class="dropdown-item" href="C:\Users\Глеб\Desktop\Пекарня\pastries.html">Пироги</a>
+                <a class="dropdown-item" href="C:\Users\Глеб\Desktop\Пекарня\dessert.html">Пирожные</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\Глеб\Desktop\Пекарня\about-us.html">О нас</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\Глеб\Desktop\Пекарня\contact-us.html">Наши контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- HEADER -->
+    <header id="contact-us" style="background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), color-stop(100%, rgba(0, 0, 0, 0)), to(#000000)), url('assets/images/pekr-min.jpg');
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%, #000000 100%), url('assets/images/pekr-min.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;">
+      <div class="m-auto">
+        <h1 class="display-1"> Наши контакты</h1>
+      </div>
+    </header>
+   <!-- form-->
+   <section class="book" id="book">
+    <h1 class="heading">Обратная <span>связь с нами</span></h1>
+
+    <form action="" id="feedback-form">
+        <input type="text" placeholder="Ваше ФИО" class="box">
+        <input type="email" placeholder="Email" class="box">
+        <input type="number" placeholder="Оценка нашего сервиса" class="box">
+        <textarea name="" placeholder="Сообщение" class="box" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="Отправить сообщение" class="btn">
+    </form>
+</section>
+
+<!-- Модальное окно -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Сообщение успешно отправлено!</h2>
+        <p>Спасибо за ваш отзыв.</p>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+document.getElementById("feedback-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    showModal();
+});
+
+function showModal() {
+    document.getElementById("modal").style.display = "block";
+}
+
+document.getElementsByClassName("close")[0].addEventListener("click", function() {
+    closeModal();
+});
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+</script>
+<div class="map-container">
+  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad9cf9a9f41de4536f9c6e812f8ed5815a95558f45b7705c728f77b2f8e89235d&amp;width=640&amp;height=543&amp;lang=ru_RU&amp;scroll=true"></script>
+</div>
+
+<div class="store-container">
+  <div class="store-row">
+    <div class="store-column">
+      <p>Магазин 1 (Советская, 24)</p>
+      <p>Брест, ул. Советская, 24
+          Режим работы: 10:00 — 21:00</p>
+    </div>
+    <div class="store-column">
+      <p>Магазин 2 (Гоголя)</p>
+      <p>Брест, ул. Гоголя, 83
+          Режим работы: 10:00 — 21:00</p>
+    </div>
+  </div>
+  <div class="store-row">
+    <div class="store-column">
+      <p>Магазин 3 (ТЦ Экватор)</p>
+      <p>Брест, Гаврилова, 16 (ТЦ Экватор)
+          Режим работы: 10:00 — 21:00
+      </p>
+    </div>
+    <div class="store-column">
+      <p>Магазин 4 (Советская, 97)</p>
+      <p>Брест, Махновича, 6 (ТЦ Варшавский)
+          Режим работы: 10:00 — 21:00</p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>Footer content goes here.</p>
+</footer>
+
+
+    <!-- FOOTER -->
+    <footer>
+      <div id="contacts" class="container-fluid">
+        <div class="row text-center">
+          <div class="col-lg-4 col-md-12">
+            <div id="xmlContainer"></div>
+
+  <script>
+    // XML-строка для разбора
+    var xmlString = `
+      <contact>
+        <h4> Наши контакты:</h4>
+        <p>
+          budbul@gmail.com; <br />
+          +375 33 323 77 98
+        </p>
+      </contact>
+    `;
+
+    // Создание объекта DOMParser
+    var parser = new DOMParser();
+
+    // Разбор XML-строки
+    var xmlDoc = parser.parseFromString(xmlString, 'text/xml');
+
+    // Получение корневого элемента
+    var contactElement = xmlDoc.documentElement;
+
+    // Вставка XML-кода в элемент контейнера
+    var xmlContainer = document.getElementById('xmlContainer');
+    xmlContainer.appendChild(contactElement);
+  </script>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <h4>Наш адрес</h4>
+            <p>
+              Брест, ул. Советская, 24
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <h4>Мы в соцсетях</h4>
+            <a href="facebook.com"> <i class="fab fa-facebook-square"></i></a>
+            <a href="twitter.com"><i class="fab fa-twitter-square"></i></a>
+            <a href="instagram.com"><i class="fab fa-instagram-square"></i></a>
+          </div>
+        </div>
+      </div>
+      <div id="copyright">
+        ООО «Пекарня ББ», УНП 291 594 301;
+        В торговом реестре 29.07.2021 г., № регистрации 173 934.
+        <img style="width: 30vh;
+        height: 5vh ;"
+            src="C:\Users\Глеб\Desktop\Пекарня\assets\images\payments.png"
+            />
+      </div>
+    </footer>
+
+    <!-- jQuery and JS scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

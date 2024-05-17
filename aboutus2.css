@@ -1,0 +1,186 @@
+.image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.image-item img {
+  max-width: 100%;
+  max-height: 400px; /* Здесь можно задать желаемую высоту */
+  margin: 0 auto; /* Добавляем эту строку для центрирования изображения */
+}
+.caption {
+  margin-top: 4px;
+}
+  
+  .text {
+    grid-area: text;
+    text-orientation: upright;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-left: 1fr;
+  }
+
+  
+  
+  .text1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+/* REVIEW */
+.review-slider {
+  max-width: 100%; /* Добавляем максимальную ширину для адаптации к размеру страницы */
+  width: 60%; /* Устанавливаем ширину контейнера на половину от страницы */
+  width: 60%; /* Устанавливаем ширину контейнера на половину от страницы */
+  margin: 0 auto; /* Центрируем контейнер по горизонтали */
+  height: 62vh; /* Устанавливаем высоту контейнера */
+  overflow: hidden; /* Скрываем содержимое, которое выходит за границы контейнера */
+}
+
+.review-slider .box {
+  /* Остальные стили оставляем без изменений */
+  border: var(--border);
+  border-radius: var(--border-radius);
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  padding: 1rem; /* reduced padding */
+  margin-bottom: 1rem; /* add margin to create space between the boxes */
+}
+
+/* Остальные стили без изменений */
+
+
+
+.review-slider .box {
+  border: var(--border);
+  border-radius: var(--border-radius);
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.review-slider .box p {
+  font-size: 1.2rem;
+  color: var(--main-color);
+  padding: .5rem 0;
+  line-height: 1.8;
+}
+
+.review-slider .box h3 {
+  font-size: 1.4rem;
+  color: var(--main-color);
+  line-height: 1.8;
+}
+
+.review-slider .box span {
+  font-size: 1.2rem;
+  color: var(--main-color);
+}
+
+.review-slider .box .fa-quote-left,
+.review-slider .box .fa-quote-right {
+  position: absolute;
+  font-size: 6rem;
+  color: #ccc;
+  z-index: -1;
+}
+
+.review-slider .box .fa-quote-left {
+  top: 2rem;
+  left: 2.5rem;
+}
+
+.review-slider .box .fa-quote-right {
+  bottom: 2rem;
+  right: 2.5rem;
+}
+
+.review-slider .box:hover .fa-quote-left {
+  top: -6.5rem;
+}
+
+.review-slider .box:hover .fa-quote-right {
+  bottom: -6.5rem;
+}
+
+.review-slider .box img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  margin-bottom: .7rem;
+}
+
+.review-slider .box .stars {
+  padding: .5rem 0;
+}
+
+.review-slider .box .stars i {
+  font-size: 1.7rem;
+  color: var(--main-color);
+}
+
+.swiper-pagination-bullet {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 0;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--main-color);
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  flex: 0 0 100%;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .review-slider {
+    width: 100%;
+    height: auto;
+  }
+
+  .review-slider .box {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .review-slider .box p {
+    font-size: 1rem;
+  }
+
+  .review-slider .box h3 {
+    font-size: 1.2rem;
+  }
+
+  .review-slider .box .fa-quote-left,
+  .review-slider .box .fa-quote-right {
+    font-size: 4rem;
+  }
+
+  .review-slider .box img {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+--main-color: #443;
+--border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+--border: .2rem solid var(--main-color);
+--border-hover: .2rem dashed var(--main-color);
+}

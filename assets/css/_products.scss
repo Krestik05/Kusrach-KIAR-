@@ -1,0 +1,63 @@
+#bread-header {
+    @include header-img("/assets/images/1ab63e7ce216a1aab70759e65f73c6ac.jpg", 0.5, 70vh);
+    h1 {
+      color: white;
+    }
+  }
+  
+  #cake-header {
+    @include header-img("/assets/images/e0ad3a38d59676467de7b8f52d8c23a5.jpg", 0.5, 70vh);
+    h1 {
+      color: white;
+    }
+  }
+  
+  #dessert-header {
+    @include header-img("/assets/images/c299be88c53d8ccc8626a4755446477f.jpg", 0.5, 70vh);
+    h1 {
+      color: white;
+    }
+  }
+  
+  #pastries-header {
+    @include header-img("/assets/images/21fde0a3a40a6a7d188fd7f8c4316740.jpg", 0.5, 70vh);
+    h1 {
+      color: white;
+    }
+  }
+  
+  .product-container {
+    margin: 3rem auto;
+    padding: 3rem;
+    img {
+      width: 19rem;
+      height: 19rem;
+      object-fit: cover;
+    }
+    p {
+      margin: 1rem auto;
+    }
+    img,
+    p {
+      cursor: pointer;
+    }
+  }
+  
+  .modal {
+    img {
+      width: 100%;
+      height: 25rem;
+      object-fit: cover;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    #bread-header,
+    #cake-header,
+    #pastries-header,
+    #dessert-header {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
